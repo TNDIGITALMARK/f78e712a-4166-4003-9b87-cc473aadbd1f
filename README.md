@@ -1,32 +1,73 @@
-# 07-18-2025-next.js-template
+# Alexandra Chen Art - Artist Portfolio
 
-## SSR and Browser API Usage
+A stunning, minimalist artist portfolio website built with Next.js 15, showcasing contemporary artwork across multiple mediums.
 
-This template includes safeguards for server-side rendering (SSR) issues with browser APIs. 
+## 🎨 Features
 
-### When to Force Dynamic Rendering
+- **Homepage**: Hero section with featured artwork and gallery grid
+- **Gallery**: Filterable artwork collection with lightbox viewer
+- **About**: Artist biography, statement, and exhibition history
+- **Contact**: Contact form and direct communication channels
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Performance**: Next.js Image optimization and server-side rendering
 
-Add `export const dynamic = 'force-dynamic';` to pages that use:
-- `navigator` (geolocation, online status, share API)
-- `window` (localStorage, sessionStorage, innerWidth/Height)
-- Browser-only APIs (Web APIs, PWA features)
+## 🚀 Getting Started
 
-### Performance Considerations
+```bash
+# Install dependencies
+npm install
 
-- **Static pages** (no browser APIs): Keep static for best performance
-- **Dynamic pages** (use browser APIs): Add the dynamic export
-- **Mixed apps**: Use selective dynamic rendering per page
+# Run development server
+npm run dev
 
-### Example Usage
+# Build for production
+npm run build
 
-```typescript
-// For pages using browser APIs
-'use client';
-export const dynamic = 'force-dynamic';
-
-import { useGeolocation } from '@/hooks/use-geolocation';
-
-export default function WeatherPage() {
-  // This page uses browser APIs, so it needs dynamic rendering
-}
+# Start production server
+npm start
 ```
+
+Visit [http://localhost:4006](http://localhost:4006) to view the site.
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx           # Homepage
+│   ├── gallery/           # Gallery page
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   └── layout.tsx         # Root layout
+├── components/
+│   ├── navigation.tsx     # Header navigation
+│   ├── footer.tsx         # Footer component
+│   ├── artwork-card.tsx   # Gallery card
+│   └── lightbox.tsx       # Image viewer
+└── lib/
+    └── artwork-data.ts    # Artwork content
+```
+
+## 🎯 Customization
+
+1. **Update Content**: Edit `/src/lib/artwork-data.ts`
+2. **Add Artwork**: Place images in `/public/generated/`
+3. **Styling**: Modify `/src/app/globals.css`
+4. **Navigation**: Update `/src/components/navigation.tsx`
+
+## 🛠️ Technology Stack
+
+- Next.js 15.5.2
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Radix UI Components
+- Lucide Icons
+
+## 📝 License
+
+Built for artists who want an elegant, professional online presence.
+
+---
+
+For detailed information, see [PROJECT_INFO.md](./PROJECT_INFO.md)

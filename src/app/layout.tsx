@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Alexandra Chen Art | Contemporary Artist Portfolio",
+  description: "Contemporary artist working across oil painting, watercolor, ceramics, and mixed media. Explore a curated collection of artwork.",
 };
 
 export default function RootLayout({
